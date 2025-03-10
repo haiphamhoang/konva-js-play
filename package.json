@@ -1,0 +1,9 @@
+{
+  "name": "konva-js-play",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "konva": "^9.3.18"
+  }
+}
