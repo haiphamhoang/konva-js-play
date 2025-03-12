@@ -28,17 +28,20 @@ const THEATER_CONFIG = {
       small: { width: 250, height: 200 }
     },
     positions: {
-      A: { x: 20, y: 220, type: 'regular', rows: 4, seatsPerRow: 3 },
-      B: { x: 370, y: 220, type: 'regular', rows: 4, seatsPerRow: 3 },
-      C: { x: 20, y: 520, type: 'small', rows: 2, seatsPerRow: 3 },
-      D: { x: 370, y: 520, type: 'small', rows: 2, seatsPerRow: 3 }
+      A: { x: 20, y: 220, type: 'regular', rows: 4, seatsPerRow: 3, offsetBorderX: 70 },
+      B: { x: 370, y: 220, type: 'regular', rows: 4, seatsPerRow: 3, offsetBorderX: 40 },
+      C: { x: 20, y: 520, type: 'small', rows: 2, seatsPerRow: 3, offsetBorderX: 70 },
+      D: { x: 370, y: 520, type: 'small', rows: 2, seatsPerRow: 3, offsetBorderX: 40 }
     }
   },
   seat: {
-    radius: 20,
+    radius: 30,
     fill: 'white',
     stroke: 'black',
-    spacing: 70
+    spacing: 70,
+    offsetBorderX: 40,
+    offsetBorderY: 10,
+
   }
 };
 

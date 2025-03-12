@@ -49,11 +49,13 @@ function createSeat(x, y, seatNumber) {
 
 function createSeatGroup(sectionId) {
   const section = THEATER_CONFIG.sections.positions[sectionId];
+  const offsetBorderX = THEATER_CONFIG.sections.positions[sectionId].offsetBorderX;
+  const offsetBorderY = THEATER_CONFIG.sections.positions[sectionId].offsetBorderY;
   const spacing = THEATER_CONFIG.seat.spacing;
   
   const seatGroup = new Konva.Group({
-    x: section.x + 30, // Offset from section border
-    y: section.y + 20, // Offset from section border
+    x: section.x + offsetBorderX, // Offset from section border
+    y: section.y + 40, // Offset from section border
   });
   
   for (let row = 0; row < section.rows; row++) {
