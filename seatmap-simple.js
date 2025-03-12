@@ -12,6 +12,18 @@ const stage = new Konva.Stage({
 // Create layer
 const layer = new Konva.Layer();
 
+// Create status text for selected seat
+const statusText = new Konva.Text({
+  x: 20,
+  y: THEATER_CONFIG.stage.height - 200,
+  text: 'Chưa chọn ghế nào',
+  fontSize: 30,
+  fill: '#000',
+  id: 'selectedSeatStatus',
+  width: 500
+});
+layer.add(statusText);
+
 // Create theater layout
 createStageArea(layer);
 createWalkway(layer);

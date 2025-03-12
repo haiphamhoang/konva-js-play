@@ -11,7 +11,7 @@ function createSeat(x, y, seatNumber) {
     x: 0,
     y: 0,
     radius: seatConfig.radius,
-    name: `Seat ${seatNumber + 1}`,
+    name: `Ghế số ${seatNumber + 1}`,
     fill: seatConfig.fill,
     stroke: seatConfig.stroke,
   });
@@ -29,7 +29,23 @@ function createSeat(x, y, seatNumber) {
 
   // Function to handle seat selection
   const handleSeatSelect = () => {
-    circle.fill('green');
+    // Toggle seat selection
+    const isSelected = circle.fill() === 'green';
+    circle.fill(isSelected ? 'white' : 'green');
+    
+    // Update the selected seat text
+    const statusText = circle.getLayer().findOne('#selectedSeatStatus');
+    if (statusText) {
+      // Get all selected seats
+      const selectedSeats = circle.getLayer()
+        .find('Circle')
+        .filter(seat => seat.fill() === 'green')
+        .map(seat => seat.name())
+        .join(', ');
+      
+      statusText.text(selectedSeats ? `Ghế đã chọn: ${selectedSeats}` : 'Chưa chọn ghế nào');
+    }
+    
     circle.getLayer().draw();
   };
 
