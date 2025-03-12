@@ -1,44 +1,44 @@
 const THEATER_CONFIG = {
   stage: {
-    width: 500,
-    height: 500,
+    width: 1000,
+    height: 1000,
     stageArea: {
-      x: 10,
-      y: 10,
-      width: 300,
-      height: 100,
+      x: 20,
+      y: 20,
+      width: 600,
+      height: 200,
       stroke: '#f4cc50',
       strokeWidth: 4,
       text: 'SÂN KHẤU',
-      fontSize: 20,
+      fontSize: 40,
       textColor: '#e49b08'
     }
   },
   walkway: {
-    x: 135,
-    y: 110,
-    width: 50,
-    height: 250,
+    x: 270,
+    y: 220,
+    width: 100,
+    height: 500,
     stroke: '#f4cc50',
     strokeWidth: 4
   },
   sections: {
     dimensions: {
-      regular: { width: 125, height: 150 },
-      small: { width: 125, height: 100 }
+      regular: { width: 250, height: 300 },
+      small: { width: 250, height: 200 }
     },
     positions: {
-      A: { x: 10, y: 110, type: 'regular', rows: 4, seatsPerRow: 3 },
-      B: { x: 185, y: 110, type: 'regular', rows: 4, seatsPerRow: 3 },
-      C: { x: 10, y: 260, type: 'small', rows: 2, seatsPerRow: 3 },
-      D: { x: 185, y: 260, type: 'small', rows: 2, seatsPerRow: 3 }
+      A: { x: 20, y: 220, type: 'regular', rows: 4, seatsPerRow: 3 },
+      B: { x: 370, y: 220, type: 'regular', rows: 4, seatsPerRow: 3 },
+      C: { x: 20, y: 520, type: 'small', rows: 2, seatsPerRow: 3 },
+      D: { x: 370, y: 520, type: 'small', rows: 2, seatsPerRow: 3 }
     }
   },
   seat: {
-    radius: 10,
+    radius: 20,
     fill: 'white',
     stroke: 'black',
-    spacing: 35
+    spacing: 70
   }
 };
 
