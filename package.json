@@ -11,9 +11,9 @@
     "vite": "^5.0.0"
   },
   "scripts": {
-    "start": "http-server dist -p 80",
+    "start": "http-server dist -p 80 &",
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview"
   }
 }

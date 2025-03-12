@@ -5,7 +5,9 @@ export default defineConfig({
     port: 3000,
   },
   preview: {
-    port: 80,
+    port: 3000,
+    host: '0.0.0.0', 
+	allowedHosts: true,
   },
   build: {
     outDir: 'dist',
